@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=ru.yewrepo.myparcels
+Exec=/usr/bin/ru.yewrepo.myparcels
+Name=MyParcels
+Name[ru]=Мои Посылки
+
+[X-Application]
+Permissions=Internet
+OrganizationName=ru.yewrepo.myparcels
+ApplicationName=MyParcels
+ExecDBus=/usr/bin/ru.yewrepo.myparcels
