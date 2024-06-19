@@ -8,6 +8,6 @@ Name[ru]=Мои Посылки
 
 [X-Application]
 Permissions=Internet
-OrganizationName=ru.yewrepo.myparcels
-ApplicationName=MyParcels
+OrganizationName=ru.yewrepo
+ApplicationName=myparcels
 ExecDBus=/usr/bin/ru.yewrepo.myparcels
