@@ -161,8 +161,8 @@ Page {
 
         Row {
             id: additionalInfoRow
-            height: isPochtaRuAndNotLoading() ? additionalInfoButton.height : 0
-            visible: isPochtaRuAndNotLoading()
+            height: 0 //isPochtaRuAndNotLoading() ? additionalInfoButton.height : 0
+            visible: false //isPochtaRuAndNotLoading()
             anchors {
                 top: captionLabel.bottom;
                 topMargin: Theme.paddingLarge

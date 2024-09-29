@@ -1,8 +1,8 @@
 Name:       ru.yewrepo.myparcels
 
 Summary:    Отслеживание посылок
-Version:    0.1
-Release:    1
+Version:    1.0
+Release:    10
 Group:      Qt/Qt
 License:    BSD-3-Clause
 URL:        https://github.com/yewrepo/my_parcels

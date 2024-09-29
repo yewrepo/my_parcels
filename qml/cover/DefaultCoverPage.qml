@@ -37,17 +37,54 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import ru.yewrepo.myparcels 1.0
 
 CoverBackground {
     objectName: "defaultCover"
 
-    CoverPlaceholder {
+    CoverTemplate {
+        id: cover
         objectName: "placeholder"
-        text: qsTr("Мои посылки")
-        icon {
-            source: Qt.resolvedUrl("../icons/ruPochta.svg")
-            sourceSize { width: icon.width; height: icon.height }
+        secondaryText: getSecondaryText()
+        primaryText: getPrimaryText()
+    }
+
+    function getPrimaryText(){
+        var parcelCount = pageStack.currentPage.parcelsCount
+        if (parcelCount !== undefined){
+            if (parcelCount === 0){
+                return ""
+            } else {
+                return parcelCount
+            }
         }
-        forceFit: true
+    }
+
+    function getSecondaryText(){
+        var parcelCount = pageStack.currentPage.parcelsCount
+        if (parcelCount !== undefined){
+            if (parcelCount === 0){
+                return "Нет посылок"
+            } else {
+                return getDeclectionWord(pageStack.currentPage.parcelsCount)
+            }
+        }
+    }
+
+    function getDeclectionWord(count) {
+        var words = ["Посылка", "Посылки", "Посылок"];
+        var n = Math.abs(count)
+        n %= 100
+        if (n >= 5 && n <= 20) {
+            return words[2]
+        }
+        n %= 10;
+        if (n === 1) {
+            return words[0]
+        }
+        if (n >= 2 && n <= 4) {
+            return words[1]
+        }
+        return words[2]
     }
 }

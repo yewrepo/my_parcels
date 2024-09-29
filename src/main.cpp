@@ -54,6 +54,7 @@ int main(int argc, char *argv[])
     QScopedPointer<QGuiApplication> application(Aurora::Application::application(argc, argv));
     application->setOrganizationName(QStringLiteral("ru.yewrepo"));
     application->setApplicationName(QStringLiteral("myparcels"));
+    application->setApplicationVersion(QStringLiteral(APP_VERSION));
 
     QScopedPointer<QQuickView> view(Aurora::Application::createView());
 

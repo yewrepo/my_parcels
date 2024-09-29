@@ -15,6 +15,7 @@ public:
 
     Q_INVOKABLE void refreshAll();
     Q_INVOKABLE void fetchAll();
+    Q_INVOKABLE int countParcels();
     Q_INVOKABLE void removeParcel(QString barcode);
     Q_INVOKABLE void setStatusChecked(QString barcode);
 

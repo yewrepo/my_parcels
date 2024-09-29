@@ -67,11 +67,6 @@ Page {
                 text: qsTr("#descriptionText")
             }
 
-            SectionHeader {
-                objectName: "licenseHeader"
-                text: qsTr("3-Clause BSD License")
-            }
-
             Label {
                 objectName: "licenseText"
                 anchors { left: parent.left; right: parent.right; margins: Theme.horizontalPageMargin }

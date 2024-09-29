@@ -46,6 +46,8 @@ Page {
     objectName: "mainPage"
     allowedOrientations: Orientation.All
 
+    property int parcelsCount: 0
+
     SilicaListView {
         anchors.fill: parent
         header: PageHeader {
@@ -161,6 +163,7 @@ Page {
         onFetchStoredBarcodes: {
             trackNumbersModel.clear()
             emptyPlaceHolder.enabled = list.length === 0
+            parcelsCount = list.length
             console.log("get stored: "+list.length)
             for (var index = 0; index < list.length; index++) {
                 trackNumbersModel.addItem(list[index]);

@@ -4,7 +4,7 @@
 <context>
     <name></name>
     <message id="Мои посылки">
-        <location filename="../qml/pages/MainPage.qml" line="53"/>
+        <location filename="../qml/pages/MainPage.qml" line="55"/>
         <source></source>
         <translation type="unfinished"></translation>
     </message>
@@ -22,14 +22,9 @@
         <translation>&lt;p&gt;Отслеживание посылок для Aurora OS&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="72"/>
-        <source>3-Clause BSD License</source>
-        <translation>3-Clause BSD License</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AboutPage.qml" line="82"/>
+        <location filename="../qml/pages/AboutPage.qml" line="77"/>
         <source>#licenseText</source>
-        <translation>&lt;p&gt;&lt;i&gt;Copyright (C) 2022 ru.yewrepo.myparcels&lt;/i&gt;&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Исходный код: https://github.com/yewrepo/my_parcels&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -56,32 +51,24 @@
     </message>
 </context>
 <context>
-    <name>DefaultCoverPage</name>
-    <message>
-        <location filename="../qml/cover/DefaultCoverPage.qml" line="46"/>
-        <source>Мои посылки</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="88"/>
+        <location filename="../qml/pages/MainPage.qml" line="90"/>
         <source>Удалить</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="104"/>
+        <location filename="../qml/pages/MainPage.qml" line="106"/>
         <source>О программе</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="110"/>
+        <location filename="../qml/pages/MainPage.qml" line="112"/>
         <source>Добавить трек-номер</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="119"/>
+        <location filename="../qml/pages/MainPage.qml" line="121"/>
         <source>Нет посылок</source>
         <translation type="unfinished"></translation>
     </message>

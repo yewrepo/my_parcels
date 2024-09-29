@@ -24,6 +24,11 @@ void BarcodeListViewModel::fetchAll()
     _localBase->fetchAll();
 }
 
+int BarcodeListViewModel::countParcels()
+{
+    return _localBase->count();
+}
+
 void BarcodeListViewModel::removeParcel(QString barcode)
 {
     _localBase->removeParcel(barcode);

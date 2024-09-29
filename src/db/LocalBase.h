@@ -24,6 +24,7 @@ public:
     bool removeParcel(QString barcode);
     bool contains(QString barcode);
     void setStatusChecked(QString barcode);
+    int count();
 
 signals:
     void storedTrackNumbers(QList<QObject* > list);
@@ -39,9 +40,11 @@ private:
             "lastStatus varchar(255), "
             "lastUpdate bigint, "
             "isNewStatus integer, "
-            "postService varchar(100)"
+            "postService varchar(100), "
+            "externalId integer "
             ");";
-    QString QUERY_ALL = "select * from " + TABLE_NAME+" order by lastUpdate DESC";
+    QString QUERY_ALL = "select * from " + TABLE_NAME + " order by lastUpdate DESC";
+    QString COUNT_ALL = "select count(*) FROM " + TABLE_NAME;
 
     bool execQuery(QString query);
     bool addParcel(QString barcode, QString userCaption, QString lastStatus, qint64 lastUpdate, QString postService);

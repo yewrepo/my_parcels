@@ -153,6 +153,16 @@ void LocalBase::setStatusChecked(QString barcode)
     }
 }
 
+int LocalBase::count()
+{
+    bool isSuccess = execQuery(COUNT_ALL);
+    if (isSuccess && _query.first()){
+        int count = _query.value(0).toInt();
+        return count;
+    }
+    return 0;
+}
+
 bool LocalBase::execQuery(QString query)
 {
     bool success = _query.exec(query);
