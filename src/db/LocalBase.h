@@ -31,7 +31,7 @@ signals:
     void barcodeListChanged();
 
 private:
-    QString DB_NAME = "yewrepo_parcels_2";
+    QString DB_NAME = "yewrepo_parcels";
     QString TABLE_NAME = "parcel_list";
     QString CREATE_TABLE_SQL = "create table "+TABLE_NAME+
             " (id integer primary key autoincrement, "
