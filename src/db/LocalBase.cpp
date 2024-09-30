@@ -1,9 +1,9 @@
 #include "LocalBase.h"
 
-LocalBase::LocalBase(QObject *parent) : QObject(parent)
+LocalBase::LocalBase(QString appFilesPath, QObject *parent) : QObject(parent)
 {
     QSqlDatabase  dbase = QSqlDatabase::addDatabase("QSQLITE");
-    dbase.setDatabaseName(DB_NAME);
+    dbase.setDatabaseName(appFilesPath + "/" + DB_NAME);
 
     if (!dbase.open()) {
         qDebug() << "open error";

@@ -55,6 +55,7 @@ Page {
             PageHeader {
                 objectName: "pageHeader"
                 title: qsTr("About Application")
+                description: qsTr("v. " + APP_VERSION)
             }
 
             Label {

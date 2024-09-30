@@ -56,9 +56,10 @@ int main(int argc, char *argv[])
     application->setApplicationName(QStringLiteral("myparcels"));
     application->setApplicationVersion(QStringLiteral(APP_VERSION));
 
-    QScopedPointer<QQuickView> view(Aurora::Application::createView());
+    qDebug() << "VERS " << APP_VERSION;
 
-    qDebug() << "filesDir: " << Aurora::Application::filesDir(false);
+    QScopedPointer<QQuickView> view(Aurora::Application::createView());
+    view->rootContext()->setContextProperty("APP_VERSION", QString(APP_VERSION));
 
     CustomErrorTypeClass::init();
 
@@ -68,7 +69,9 @@ int main(int argc, char *argv[])
     qRegisterMetaType<LoadingStatus>("LoadingStatus");
     qmlRegisterUncreatableType<LoadingStateClass>("ru.yewrepo.myparcels", 1, 0, "LoadingStatus", "Enum type");
 
-    LocalBase *localBase = new LocalBase(view.data());
+    QString appFilesPath = Aurora::Application::filesDir(false).path();
+
+    LocalBase *localBase = new LocalBase(appFilesPath, view.data());
     Updater *updater = new Updater(localBase, view.data());
 
     CheckBarcodeViewModel checkBarcodeViewModel{localBase, view.data()};

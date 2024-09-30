@@ -51,11 +51,13 @@ Page {
     SilicaListView {
         anchors.fill: parent
         header: PageHeader {
+            id: header
             objectName: "pageHeader"
             title: qsTrId("Мои посылки")
             extraContent.children: [
                 IconButton {
-                    objectName: "aboutButton"
+                    id: refreshButton
+                    objectName: "refreshButton"
                     icon.source: "image://theme/icon-m-refresh"
                     anchors.verticalCenter: parent.verticalCenter
                     onClicked: {
@@ -173,7 +175,7 @@ Page {
         onLoadingCallback: {
             console.log("onLoadingCallback: "+loadingState)
             loadingPanel.open = loadingState === LoadingStatus.LOADING
-            if (loadingState === LoadingStatus.ERROR){
+            if (loadingState === LoadingStatus.ERROR) {
                 Notices.show("ERROR", Notice.Long, Notice.Center)
             }
         }

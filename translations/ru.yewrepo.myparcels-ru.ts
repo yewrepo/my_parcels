@@ -4,7 +4,7 @@
 <context>
     <name></name>
     <message id="Мои посылки">
-        <location filename="../qml/pages/MainPage.qml" line="55"/>
+        <location filename="../qml/pages/MainPage.qml" line="56"/>
         <source></source>
         <translation type="unfinished"></translation>
     </message>
@@ -17,12 +17,12 @@
         <translation>О приложении</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="67"/>
+        <location filename="../qml/pages/AboutPage.qml" line="68"/>
         <source>#descriptionText</source>
         <translation>&lt;p&gt;Отслеживание посылок для Aurora OS&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="77"/>
+        <location filename="../qml/pages/AboutPage.qml" line="78"/>
         <source>#licenseText</source>
         <translation>&lt;p&gt;Исходный код: https://github.com/yewrepo/my_parcels&lt;/p&gt;</translation>
     </message>
@@ -53,22 +53,22 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="90"/>
+        <location filename="../qml/pages/MainPage.qml" line="92"/>
         <source>Удалить</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="106"/>
+        <location filename="../qml/pages/MainPage.qml" line="108"/>
         <source>О программе</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="112"/>
+        <location filename="../qml/pages/MainPage.qml" line="114"/>
         <source>Добавить трек-номер</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="121"/>
+        <location filename="../qml/pages/MainPage.qml" line="123"/>
         <source>Нет посылок</source>
         <translation type="unfinished"></translation>
     </message>

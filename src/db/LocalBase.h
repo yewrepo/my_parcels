@@ -14,7 +14,7 @@ class LocalBase : public QObject
     Q_OBJECT
 
 public:
-    explicit LocalBase(QObject *parent = nullptr);
+    explicit LocalBase(QString appFilesPath, QObject *parent = nullptr);
 
     void fetchAll();
     QList<TrackNumberData*> getAll();
@@ -31,7 +31,7 @@ signals:
     void barcodeListChanged();
 
 private:
-    QString DB_NAME = "yewrepo_parcels";
+    QString DB_NAME = "yewrepo_parcels_2";
     QString TABLE_NAME = "parcel_list";
     QString CREATE_TABLE_SQL = "create table "+TABLE_NAME+
             " (id integer primary key autoincrement, "

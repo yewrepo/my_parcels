@@ -1,6 +1,8 @@
 TARGET = ru.yewrepo.myparcels
 
-DEFINES += APP_VERSION='\\"$$VERSION\\"'
+VERSION=1.1
+
+DEFINES += APP_VERSION=\\\"$$VERSION\\\"
 
 QT += sql svg concurrent
 

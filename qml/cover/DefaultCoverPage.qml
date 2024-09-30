@@ -46,33 +46,27 @@ CoverBackground {
         id: cover
         objectName: "placeholder"
         secondaryText: getSecondaryText()
-        primaryText: getPrimaryText()
+        primaryText: getParcelNumber()
     }
 
-    function getPrimaryText(){
+    function getParcelNumber() {
         var parcelCount = pageStack.currentPage.parcelsCount
-        if (parcelCount !== undefined){
-            if (parcelCount === 0){
-                return ""
-            } else {
-                return parcelCount
-            }
+        if (parcelCount !== undefined && parcelCount !== 0){
+            return parcelCount
         }
+        return ""
     }
 
-    function getSecondaryText(){
+    function getSecondaryText() {
         var parcelCount = pageStack.currentPage.parcelsCount
-        if (parcelCount !== undefined){
-            if (parcelCount === 0){
-                return "Нет посылок"
-            } else {
-                return getDeclectionWord(pageStack.currentPage.parcelsCount)
-            }
+        if (parcelCount !== undefined && parcelCount !== 0){
+            return getDeclectionWord(pageStack.currentPage.parcelsCount)
         }
+        return "Нет посылок"
     }
 
     function getDeclectionWord(count) {
-        var words = ["Посылка", "Посылки", "Посылок"];
+        var words = ["посылка", "посылки", "посылок"];
         var n = Math.abs(count)
         n %= 100
         if (n >= 5 && n <= 20) {
